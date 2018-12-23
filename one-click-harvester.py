@@ -34,7 +34,7 @@ class HarvesterThread(threading.Thread):
         self.proxy = proxy
 
     def run(self):
-        print("Starting harvester{} | Proxy: {}".format(self.id, self.proxy))
+        print("Starting harvester{} | Proxy: {}\n".format(self.id, self.proxy))
         har = Harvester(proxy=self.proxy)
         har.get("https://docs.google.com/document/d/1-sP_nwjdBgXjRnKC-33YRCysb2gFa7Jvo-ScZ-E5Tm8/edit")
 
