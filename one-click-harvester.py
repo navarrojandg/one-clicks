@@ -18,7 +18,7 @@ class Harvester:
         self.options.add_extension(os.getcwd() + "\\extensions\\auto_refresh_1.3.8_0.crx")
         self.options.add_extension(os.getcwd() + "\\extensions\\youtube_auto_like_2.3.2_0.crx")
         # self.options.add_extension(os.getcwd() + "\\extensions\\proxy_switch_omega_2.5.20_0.crx")
-        self.browser = webdriver.Chrome(options=self.options)
+        self.browser = webdriver.Chrome(chrome_options=self.options)
 
     def get(self, url):
         self.browser.get(url)
