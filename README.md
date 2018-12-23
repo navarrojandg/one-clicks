@@ -9,6 +9,7 @@ Instructions
 - paste your proxies into PROXY_LIST.txt (1 proxy per line, must be ip authorized proxy server)
 - unzip and execute the one-click.py
 - enter how many harvesters you need (1 harvester per gmail)
+- sign into each harvester with gmail and sync
 - wait for google doc to load and follow instructions on google doc
 
 Notes
