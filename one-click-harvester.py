@@ -50,7 +50,7 @@ def read_proxy_list():
 if __name__ == '__main__':
     proxies = read_proxy_list()
     threadList = []
-    for i in range(input("How many harvesters? :")):
+    for i in range(int(input("How many harvesters? :"))):
         try:
             threadList.append(HarvesterThread(i, proxies.pop()))
         except IndexError:
