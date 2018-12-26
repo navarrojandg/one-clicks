@@ -14,11 +14,14 @@ class Harvester:
         self.options.add_argument("--window-size=1280,800")
         self.options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/71.0.3578.98 Safari/537.36")
         if proxy is not None:
-            self.options.add_argument("--proxy-server={}".format(proxy))
+            p = proxy.split(":")
+            p_hostport = "{}:{}".format(p[0],p[1])
+            print(p_hostport)
+            self.options.add_argument("--proxy-server={}".format(p_hostport))
         self.options.add_extension(os.getcwd() + "\\extensions\\auto_refresh_1.3.8_0.crx")
         self.options.add_extension(os.getcwd() + "\\extensions\\youtube_auto_like_2.3.2_0.crx")
         # self.options.add_extension(os.getcwd() + "\\extensions\\proxy_switch_omega_2.5.20_0.crx")
-        self.browser = webdriver.Chrome(options=self.options)
+        self.browser = webdriver.Chrome(chrome_options=self.options)
 
     def get(self, url):
         self.browser.get(url)
