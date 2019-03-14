@@ -1,0 +1,14 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "electron version of one click",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jan navarro",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^4.1.0"
+  }
+}
